@@ -1,11 +1,11 @@
 import { ArrowIcon } from '@/components/Icon';
-import { bio, bioTitle, bioSubtitle, location } from '@/lib/info';
+import { bio, name, role, location } from '@/lib/info';
 
 const Home = () => {
   return (
     <section className="text-neutral-800 dark:text-white select-none">
-      <h1 className="font-bold text-4xl font-serif">{bioTitle}.</h1>
-      <h1 className="font-bold text-4xl font-serif">{bioSubtitle}.</h1>
+      <h1 className="font-bold text-4xl font-serif">{name}.</h1>
+      <h1 className="font-bold text-4xl font-serif">{role}.</h1>
       <h3 className="font-bold text-sm font-serif text-neutral-500 dark:text-neutral-400">
         {location}
       </h3>
