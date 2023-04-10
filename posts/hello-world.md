@@ -26,6 +26,25 @@ Lorem ipsum dolor `Lorem `.
 ```bash
 Lorem ipsum dolor
 ```
+
+```plantuml
+@startuml
+  class Example {
+    - String name
+    - int number 
+    
+    +void getName()
+    +void getNumber()
+    +String toString()
+  }
+@enduml
+```
+```java
+public static final int TEST = 1324
+```
+
+
+
 ## Lorem ipsum dolor
 
 * [Lorem ipsum dolor](https://hgonzaga.com/)

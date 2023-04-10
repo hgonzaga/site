@@ -1,87 +1,68 @@
 import type { Metadata } from 'next';
-import moment from 'moment';
 import {
   GitHubIcon,
   ArrowIcon,
   TwitterIcon,
   LinkedInIcon,
-} from '@/components/Icon';
-import {
-  role,
-  companyName,
-  companyWebsite,
-  jobTitle,
-  techStack,
-  name,
-} from '@/lib/info';
+} from '@/components/icons';
+import { techStack, certifications, company, role } from '@/lib/info';
+import CertificationBadge from '@/components/certificationBadge';
+import moment from 'moment';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Who is Hugo and what is he doing out there?.',
-};
-
-const getYearsOfExpirience = () => {
-  return moment([2018, 9])
-    .fromNow(true)
-    .replace(/\s/g, '')
-    .replace('years', '+ years');
+  description: 'Who is Hugo and what is he doing out there?',
 };
 
 export default function AboutPage() {
+  const techStackBadges = techStack.map((teck) => (
+    <div
+      className="bg-neutral-100 dark:bg-neutral-800 font-condensed rounded-md py-1 px-2 mb-2 mr-2"
+      key={teck}
+    >
+      {teck}
+    </div>
+  ));
+
+  const certificationBadges = certifications
+    .sort((a, b) => moment(b.conclusionDate).diff(moment(a.conclusionDate)))
+    .map((certification) => (
+      <CertificationBadge key={certification.courseName} {...certification} />
+    ));
+
   return (
-    <section className="max-w-xl select-none">
-      <h1 className="font-bold text-4xl font-serif">About Me</h1>
+    <section className="max-w-xl">
+      <h1 className="text-3xl font-condensed">About Me</h1>
 
-      <div className="prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200">
-        <p className="my-5 text-justify">
-          My name is {name}, I was born in Portugal, and I'm son of the 90's
-          (probably the coolest generation ever!). I can state that I witnessed
-          many of the biggest leaps in the evolution of the digital era, and
-          that triggered from an early age the desire to be able to leave my
-          mark in the IT world.
+      <div className="prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200 mt-5">
+        <p>
+          Hey there, from a galaxy not too far away! I'm Hugo, a <b>{role}</b>{' '}
+          extraordinaire hailing from the sunny streets of Lisbon, Portugal. As
+          a proud child of the 90s (aka the raddest generation ever), I've seen
+          it all - from floppy disks and dial-up internet to the era of
+          streaming everything. I've grown up witnessing the leaps and bounds of
+          the digital age, and let me tell you, it's been a wild ride!
+        </p>
+        <p>
+          Nowadays, you can find me slinging code and creating magic behind the
+          scenes at <b>{company()}</b>, where I'm on a mission to bring balance
+          to the Force in the the digital realm (one line of code at a time).
+          Armed with my MSc in Telecommunications and Computer Engineering and
+          wielding my trusty lightsaber-like keyboard, I'm not just a coding
+          Wookiee, I'm also a certified taco aficionado. When I'm not buried in
+          lines of code, battling bugs and glitches, you might catch me
+          indulging in my guilty pleasure - devouring tacos with gusto! Call me
+          Taco-wan Kenobi!
         </p>
 
-        <p className="text-justify">
-          I graduated in 2019 with an MSc degree in Telecommunications and
-          Computer Engineering from ISCTE - University Institute of Lisbon, and
-          I easily got the taste for programming and building for the web.
-          Currently, I'm a passionate <b>{role}</b> with{' '}
-          {getYearsOfExpirience()} of experience in software development, who
-          relentlessly seeks knowledge and growth on a daily basis, and is
-          working in the telecommunications sector for a world-class global
-          voice and network provider called{' '}
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href={companyWebsite}
-            className="no-underline "
-          >
-            <b>{companyName}</b>
-          </a>
-          .
-        </p>
-
-        <div>
-          <p className="text-justify">
+        <div className="my-5 ">
+          <p>
             Here is the technology stack that I have been working with recently:
           </p>
-          <div className="flex flex-auto flex-wrap justify-between">
-            {techStack()}
-          </div>
+          <div className="flex flex-auto flex-wrap">{techStackBadges}</div>
         </div>
 
-        <hr />
-        <p className="mb-8 text-justify">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-          vero eros et accumsan et iusto odio dignissim qui blandit praesent
-          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-        </p>
-        <div className="flex flex-col gap-2 md:flex-row md:gap-2">
+        <div className="flex flex-col gap-2 md:flex-row md:gap-2 mt-8 select-none">
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -118,6 +99,17 @@ export default function AboutPage() {
             </div>
             <ArrowIcon />
           </a>
+        </div>
+
+        <hr />
+      </div>
+
+      <div className="mt-8">
+        <p className="font-condensed text-2xl">
+          Latest activities on learning path:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 row-span-2 mt-8">
+          {certificationBadges}
         </div>
       </div>
     </section>

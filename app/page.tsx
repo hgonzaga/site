@@ -1,18 +1,27 @@
-import { ArrowIcon } from '@/components/Icon';
-import { bio, name, role, location } from '@/lib/info';
+import { ArrowIcon } from '@/components/icons';
+import { company, jobTitle, name, role } from '@/lib/info';
 
 const Home = () => {
   return (
-    <section className="text-neutral-800 dark:text-white select-none">
-      <h1 className="font-bold text-4xl font-serif">{name}.</h1>
-      <h1 className="font-bold text-4xl font-serif">{role}.</h1>
-      <h3 className="font-bold text-sm font-serif text-neutral-500 dark:text-neutral-400">
-        {location}
-      </h3>
+    <section className="text-neutral-800 dark:text-white">
+      <h1 className="font-condensed text-3xl">
+        Hey! I'm <span className="text-orange-600">{name}</span>
+      </h1>
+      <h1 className="font-condensed text-2xl text-neutral-500 dark:text-neutral-400">
+        {role}
+      </h1>
 
-      <p className="my-5 max-w-lg dark:text-neutral-200 text-justify ">
-        {bio()}
-      </p>
+      <div className="my-5 max-w-lg dark:text-neutral-200">
+        <p>
+          Yep, I'm a {jobTitle}, crafting APIs like a droid optimizing
+          hyperdrive calculations. Currently using my geeky skills at{' '}
+          <b>{company()}</b>, bringing the Force to the web. May the code be
+          clean as I battle the bugs like a skilled starfighter!
+        </p>
+        <p className="font-condensed mt-2 text-neutral-500 dark:text-neutral-400">
+          #MayTheCodeBeWithYou #BackendDevWars
+        </p>
+      </div>
 
       <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
         <li>

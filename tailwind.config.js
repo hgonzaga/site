@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['var(--font-playfair)'],
         sans: ['Roboto', 'sans-serif'],
+        condensed: ['var(--font-roboto-condensed)'],
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-hyphens')],
 };

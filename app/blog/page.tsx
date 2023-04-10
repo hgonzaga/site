@@ -1,4 +1,4 @@
-import PostPreview from '@/components/PostPreview';
+import PostPreview from '@/components/postPreview';
 import getPostMetadata from '@/components/getPostMetadata';
 import { Metadata } from 'next';
 
@@ -15,7 +15,7 @@ const BlogPage = () => {
 
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif mb-5">Blog</h1>
+      <h1 className="text-3xl font-condensed mb-5">Blog</h1>
       <div className="grid grid-cols-1 gap-4">{postPreview}</div>
     </section>
   );
