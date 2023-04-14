@@ -16,5 +16,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('tailwindcss-hyphens')],
+  plugins: [require('@tailwindcss/typography')],
 };

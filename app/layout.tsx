@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import localFont from '@next/font/local';
+import localFont from 'next/font/local';
 import clsx from 'clsx';
 import Navbar from '@/components/navBar';
 
@@ -57,7 +57,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'text-black bg-white dark:text-white dark:bg-neutral-900',
+        'text-black bg-white dark:text-white dark:bg-neutral-950',
         font.variable
       )}
     >
