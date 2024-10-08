@@ -5,8 +5,9 @@ Built using [Next.js](https://nextjs.org/), the site is designed to be fast, res
 
 The site is hosted via **GitHub Pages** and regularly updated with new content and insights from my ongoing development experience.
 
-
 ## Running Locally
+
+This application requires Node.js v18.17+.
 
 ```bash
 git clone https://github.com/hgonzaga/site.git
@@ -18,7 +19,14 @@ npm install
 npm run dev
 ```
 
-This application requires Node.js v18.17+.
+## Usage Guidelines
+
+1. Feel free to reference or adapt this content for your own work.
+2. Direct copying is discouraged, and please ensure any personal data related to me is removed.
+
+## Acknowledgements
+
+Special thanks to **Lee Robinson**(aka [@leerob](https://github.com/leerob)] for inspiring the creation of this site. His work provided a foundation of ideas that helped shape this project.
 
 ## Libraries
 
