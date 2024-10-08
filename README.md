@@ -26,7 +26,7 @@ npm run dev
 
 ## Acknowledgements
 
-Special thanks to **Lee Robinson**(aka [@leerob](https://github.com/leerob)] for inspiring the creation of this site. His work provided a foundation of ideas that helped shape this project.
+Special thanks to **Lee Robinson** (aka [@leerob](https://github.com/leerob)) for inspiring the creation of this site. His work provided a foundation of ideas that helped shape this project.
 
 ## Libraries
 
