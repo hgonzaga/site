@@ -12,16 +12,10 @@ const navItems = {
   '/about': {
     name: 'about',
   },
-  '/blog': {
-    name: 'blog',
-  },
 };
 
 const Navbar = () => {
   let pathname = usePathname() || '/';
-  if (pathname.includes('/blog/')) {
-    pathname = '/blog';
-  }
 
   return (
     <aside className="md:w-40 md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-condensed select-none">
