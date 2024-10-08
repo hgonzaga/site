@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hugo Gonzaga',
     description: 'Software Engineer.',
-    url: 'https://hgonzaga.com',
+    url: 'https://hgonzaga.dev',
     siteName: 'Hugo Gonzaga',
     images: [
       {
-        url: 'https://hgonzaga.com/og.jpg',
+        url: 'https://hgonzaga.dev/og.jpg',
         width: 1920,
         height: 1080,
       },
