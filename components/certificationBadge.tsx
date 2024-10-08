@@ -4,7 +4,9 @@ import { ArrowIcon, FreeCodeCampIcon } from './icons';
 export default function CertificationBadge(props: CertificationMetadata) {
   return (
     <div
-      className="grid grid-cols-1 bg-neutral-100 dark:bg-neutral-800 rounded-md px-4 py-1 font-condensed"
+      className={`grid grid-cols-1 bg-neutral-100 dark:bg-neutral-800 rounded-md px-4 py-1 font-condensed ${
+        !props.conclusionDate ? 'blur-sm' : ''
+      }`}
       key={props.courseName}
     >
       <div className="flex flex-row justify-between mb-2">

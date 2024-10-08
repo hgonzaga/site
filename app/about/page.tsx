@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import {
-  GitHubIcon,
-  ArrowIcon,
-  TwitterIcon,
-  LinkedInIcon,
-} from '@/components/icons';
-import { techStack, certifications, company, role } from '@/lib/info';
+  techStack,
+  certifications,
+  companyName,
+  companyWebsite,
+} from '@/lib/info';
 import CertificationBadge from '@/components/certificationBadge';
 import moment from 'moment';
 
@@ -32,27 +31,34 @@ export default function AboutPage() {
 
   return (
     <section className="max-w-xl">
-      <h1 className="text-3xl font-condensed">About Me</h1>
-
       <div className="prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200 mt-5">
         <p>
-          Hey there, from a galaxy not too far away! I'm Hugo, a <b>{role}</b>{' '}
+          Hey there, from a galaxy not too far away! I'm a software engineer
           extraordinaire hailing from the sunny streets of Lisbon, Portugal. As
           a proud child of the 90s (aka the raddest generation ever), I've seen
-          it all - from floppy disks and dial-up internet to the era of
-          streaming everything. I've grown up witnessing the leaps and bounds of
-          the digital age, and let me tell you, it's been a wild ride!
+          it all - from the excitement of playing 16-bit pixelated video games
+          on bulky CRT monitor to the era of streaming everything. I've grown up
+          witnessing the leaps and bounds of the digital age, and let me tell
+          you, it's been a wild ride!
         </p>
         <p>
           Nowadays, you can find me slinging code and creating magic behind the
-          scenes at <b>{company()}</b>, where I'm on a mission to bring balance
-          to the Force in the the digital realm (one line of code at a time).
-          Armed with my MSc in Telecommunications and Computer Engineering and
-          wielding my trusty lightsaber-like keyboard, I'm not just a coding
-          Wookiee, I'm also a certified taco aficionado. When I'm not buried in
-          lines of code, battling bugs and glitches, you might catch me
-          indulging in my guilty pleasure - devouring tacos with gusto! Call me
-          Taco-wan Kenobi!
+          scenes at &nbsp;
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={companyWebsite}
+            className="no-underline hover:text-neutral-700 dark:hover:text-neutral-200"
+          >
+            {companyName}
+          </a>
+          , where I'm on a mission to bring balance to the Force in the IT world
+          (one line of code at a time). Armed with my MSc in Telecommunications
+          and Computer Engineering and wielding my trusty lightsaber-like
+          keyboard, I'm not just a coding Wookiee, I'm also a certified taco
+          aficionado. When I'm not buried in lines of code, battling bugs and
+          glitches, you might catch me indulging in my guilty pleasure -
+          devouring tacos with gusto! Call me Taco-wan Kenobi!
         </p>
 
         <div className="my-5 ">
@@ -62,7 +68,7 @@ export default function AboutPage() {
           <div className="flex flex-auto flex-wrap">{techStackBadges}</div>
         </div>
 
-        <div className="flex flex-col gap-2 md:flex-row md:gap-2 mt-8 select-none">
+        {/*         <div className="flex flex-col gap-2 md:flex-row md:gap-2 mt-8 select-none">
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -99,15 +105,13 @@ export default function AboutPage() {
             </div>
             <ArrowIcon />
           </a>
-        </div>
+        </div> */}
 
         <hr />
       </div>
 
       <div className="mt-8">
-        <p className="font-condensed text-2xl">
-          Latest activities on learning path:
-        </p>
+        <p>Latest activities on learning path:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 row-span-2 mt-8">
           {certificationBadges}
         </div>

@@ -1,7 +1,6 @@
 export const name = 'Hugo Gonzaga';
-export const role = 'Software Engineer';
 export const location = 'Lisbon, Portugal';
-export const jobTitle = 'Backend Developer';
+export const jobTitle = 'Fullstack Developer';
 export const interestsList = ['TypeScript', 'React', 'Next.js'];
 export const companyName = 'Colt Technology Services';
 export const companyWebsite = 'https://www.colt.net/';
@@ -29,6 +28,16 @@ export const certifications = [
     courseCertificate:
       'https://www.freecodecamp.org/certification/hgonzaga/javascript-algorithms-and-data-structures',
     conclusionDate: '2022-01-18',
+    sourceCodeUrl:
+      'https://github.com/hgonzaga/freecodecamp-js-algorithms-data-structures',
+  },
+  {
+    org: 'udemy',
+    orgUrl: 'https://www.udemy.com',
+    courseName: 'Angular - The Complete Guide',
+    courseCertificate:
+      'https://www.udemy.com/course/the-complete-guide-to-angular-2',
+    conclusionDate: '',
     sourceCodeUrl:
       'https://github.com/hgonzaga/freecodecamp-js-algorithms-data-structures',
   },
