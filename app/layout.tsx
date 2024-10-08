@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import clsx from 'clsx';
-import Navbar from '@/components/navBar';
+import Navbar from '@/components/NavBar';
 
 const font = localFont({
   src: '../public/fonts/RobotoCondensed-Regular.ttf',

@@ -1,4 +1,4 @@
-import PostPreview from '@/components/postPreview';
+import PostPreview from '@/components/PostPreview';
 import getPostMetadata from '@/components/getPostMetadata';
 import { Metadata } from 'next';
 

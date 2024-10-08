@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PostMetadata } from './postMetadata';
+import { PostMetadata } from './PostMetadata';
 
 export default function PostPreview(props: PostMetadata) {
   return (
