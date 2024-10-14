@@ -17,7 +17,7 @@ const AnimatedName = () => {
             </span>
           ))}
         </span>
-        <span className="inline-block absolute left-0 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 text-orange-600">
+        <span className="inline-block absolute left-0 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 text-holmoak">
           {'@hgonzaga'.split('').map((letter, index) => (
             <span
               key={index}
@@ -47,7 +47,7 @@ const Home = () => {
               rel="noopener noreferrer"
               target="_blank"
               href={companyWebsite}
-              className="no-underline text-orange-600  hover:text-orange-700 dark:hover:text-orange-500"
+              className="underline text-nature hover:text-neutral-700 dark:hover:text-neutral-200"
             >
               {companyName}
             </a>
