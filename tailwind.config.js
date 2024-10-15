@@ -14,6 +14,9 @@ module.exports = {
         sans: ['Roboto', 'sans-serif'],
         condensed: ['var(--font-roboto-condensed)'],
       },
+      colors: {
+        holmoak: '#8a988a',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const techStackBadges = techStack.map((teck) => (
     <div
-      className="bg-neutral-100 dark:bg-neutral-800 font-condensed rounded-md py-1 px-2 mb-2 mr-2"
+      className="bg-neutral-100 dark:bg-neutral-800 font-condensed rounded-md py-1 px-2 mb-2 mr-2 select-none hover:translate-y-1"
       key={teck}
     >
       {teck}
@@ -36,34 +36,29 @@ export default function AboutPage() {
           Hey there, from a galaxy not too far away! I'm a software engineer
           extraordinaire hailing from the sunny streets of Lisbon, Portugal. As
           a proud child of the 90s (aka the raddest generation ever), I've seen
-          it all - from the excitement of playing 16-bit pixelated video games
-          on bulky CRT monitor to the era of streaming everything. I've grown up
-          witnessing the leaps and bounds of the digital age, and let me tell
-          you, it's been a wild ride!
+          it all - from the excitement of playing pixelated video games on bulky
+          monitors to the era of streaming everything. I've grown up witnessing
+          the leaps and bounds of the digital age and it's been a wild ride!
         </p>
         <p>
-          Nowadays, you can find me slinging code and creating magic behind the
-          scenes at &nbsp;
+          Nowadays, you can find me coding at &nbsp;
           <a
             rel="noopener noreferrer"
             target="_blank"
             href={companyWebsite}
-            className="no-underline hover:text-neutral-700 dark:hover:text-neutral-200"
+            className="underline hover:text-neutral-700 dark:hover:text-neutral-200"
           >
             {companyName}
           </a>
-          , where I'm on a mission to bring balance to the Force in the IT world
-          (one line of code at a time). Armed with my MSc in Telecommunications
-          and Computer Engineering and wielding my trusty lightsaber-like
-          keyboard, I'm not just a coding Wookiee, I'm also a certified taco
-          aficionado. When I'm not buried in lines of code, battling bugs and
-          glitches, you might catch me indulging in my guilty pleasure -
-          devouring tacos with gusto! Call me Taco-wan Kenobi!
+          , contributing to software products through thoughtful and efficient
+          coding, as a fullstack developer. When I'm not wrangling code, you
+          might find me secretly indulging in my guilty pleasure: binge-watching
+          anime likes there's no tomorrow!
         </p>
 
         <div className="my-5 ">
           <p>
-            Here is the technology stack that I have been working with recently:
+            Some of the technology stack that I have been working with recently:
           </p>
           <div className="flex flex-auto flex-wrap">{techStackBadges}</div>
         </div>
