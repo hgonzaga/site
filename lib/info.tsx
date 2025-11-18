@@ -2,19 +2,21 @@ export const name = 'Hugo Gonzaga';
 export const location = 'Lisbon, Portugal';
 export const jobTitle = 'Fullstack Developer';
 export const interestsList = ['TypeScript', 'React', 'Next.js'];
-export const companyName = 'Colt Technology Services';
-export const companyWebsite = 'https://www.colt.net/';
+export const companyName = 'Volkswagen Group Digital Solutions';
+export const companyWebsite = 'https://vwg-digitalsolutions.pt/';
 
 export const techStack = [
-  'Java (17)',
+  'Java (21)',
   'JavaScript (ES6+)',
   'TypeScript',
   'Spring Boot',
   'Node.js',
+  'React',
   'Angular2+',
   'Microservices',
   'RESTful',
   'OpenAPI',
+  'Event-driven',
   'RabbitMQ',
   'Oracle Database',
   'MongoDB',

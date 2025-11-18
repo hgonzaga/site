@@ -34,11 +34,11 @@ export default function AboutPage() {
       <div className="prose prose-neutral dark:prose-invert text-neutral-800 dark:text-neutral-200 mt-5">
         <p>
           Hey there, from a galaxy not too far away! I'm a software engineer
-          extraordinaire hailing from the sunny streets of Lisbon, Portugal. As
-          a proud child of the 90s (aka the raddest generation ever), I've seen
-          it all - from the excitement of playing pixelated video games on bulky
-          monitors to the era of streaming everything. I've grown up witnessing
-          the leaps and bounds of the digital age and it's been a wild ride!
+          hailing from the sunny streets of Lisbon, Portugal. As a proud child
+          of the 90s (aka the raddest generation ever), I've seen it all, from
+          the excitement of playing pixelated video games on bulky monitors to
+          the era of streaming everything. I've grown up witnessing the leaps
+          and bounds of the digital age and it's been a wild ride!
         </p>
         <p>
           Nowadays, you can find me coding at &nbsp;
